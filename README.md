@@ -29,6 +29,38 @@ const lastWeek = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
 console.log(timeago(lastWeek)); // "pre nedelju dana"
 ```
 
+### Upotreba u Vue.js
+
+Onomad dolazi sa gotovom Vue komponentom koja automatski ažurira prikaz vremena.
+
+#### Instalacija
+
+```bash
+npm install onomad vue
+```
+
+#### Upotreba komponente
+
+```vue
+<script setup lang="ts">
+import { TimeAgo } from 'onomad/vue';
+
+const postDate = new Date(Date.now() - 5 * 60 * 1000);
+</script>
+
+<template>
+  <div>
+    <p>Objavljeno <TimeAgo :date="postDate" /></p>
+  </div>
+</template>
+```
+
+Komponenta automatski ažurira prikazan tekst svakih 60 sekundi. Možete prilagoditi interval ažuriranja:
+
+```vue
+<TimeAgo :date="postDate" :update-interval="5000" />
+```
+
 ## API Referenca
 
 ### `timeago(time: Date): string`
