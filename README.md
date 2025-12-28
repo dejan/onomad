@@ -33,14 +33,6 @@ console.log(timeago(lastWeek)); // "pre nedelju dana"
 
 Onomad dolazi sa gotovom Vue komponentom koja automatski ažurira prikaz vremena.
 
-#### Instalacija
-
-```bash
-npm install onomad vue
-```
-
-#### Upotreba komponente
-
 ```vue
 <script setup lang="ts">
 import { TimeAgo } from 'onomad/vue';
@@ -59,24 +51,6 @@ Komponenta automatski ažurira prikazan tekst svakih 60 sekundi. Možete prilago
 
 ```vue
 <TimeAgo :date="postDate" :update-interval="5000" />
-```
-
-### Upotreba u Nuxt.js
-
-U Nuxt projektima, komponenta automatski radi bez dodatne konfiguracije:
-
-```vue
-<script setup lang="ts">
-import { TimeAgo } from 'onomad/vue';
-
-const postDate = new Date(Date.now() - 5 * 60 * 1000);
-</script>
-
-<template>
-  <div>
-    <p>Objavljeno <TimeAgo :date="postDate" /></p>
-  </div>
-</template>
 ```
 
 Za server-side rendering (SSR), komponenta će prikazati inicijalno vreme, a zatim će nastaviti sa ažuriranjem na klijentskoj strani.
