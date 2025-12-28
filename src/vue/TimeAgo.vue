@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted, watch } from 'vue';
-import { timeago } from '../onomad';
+import { timeago } from 'onomad';
 
 const props = withDefaults(defineProps<{
   date: Date | string;
