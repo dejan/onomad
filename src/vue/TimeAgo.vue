@@ -9,11 +9,11 @@ const props = withDefaults(defineProps<{
   updateInterval: 60000
 });
 
-const formattedTime = ref(timeago(props.date));
+const formattedTime = ref(timeago(new Date(props.date)));
 let intervalId: ReturnType<typeof setInterval> | null = null;
 
 const updateTime = () => {
-  formattedTime.value = timeago(props.date);
+  formattedTime.value = timeago(new Date(props.date));
 };
 
 onMounted(() => {
