@@ -1,6 +1,6 @@
 {
   "name": "onomad",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Time formatting optimized for Serbian language",
   "type": "module",
   "main": "./dist/index.js",
@@ -27,7 +27,7 @@
   "keywords": [
     "serbian",
     "serbian-language",
-    "time-formatting",
+    "time-formatting"
   ],
   "author": "Dejan Simic <desimic@gmail.com>",
   "license": "MIT",
@@ -47,5 +47,8 @@
     "vue": {
       "optional": true
     }
+  },
+  "dependencies": {
+    "onomad": "^2.0.1"
   }
 }
