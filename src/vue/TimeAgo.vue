@@ -3,7 +3,7 @@ import { ref, onMounted, onUnmounted, watch } from 'vue';
 import { timeago } from '../onomad';
 
 const props = withDefaults(defineProps<{
-  date: Date;
+  date: Date | string;
   updateInterval?: number;
 }>(), {
   updateInterval: 60000
