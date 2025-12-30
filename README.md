@@ -18,7 +18,7 @@ JavaScript već ima ugrađeni Intl API za formatiranje vremena, ali rezultati ni
 | pre 30 dana | pre mesec dana |
 | pre 365 dana | pre godinu dana |
 
-Onomad koristi prirodnije izraze koji su uobičajeni u svakodnevnom srpskom jeziku, kao što su "malopre", "juče", "pre pola sata" i "pre nedelju dana", umesto doslovnih brojčanih prikaza.
+Onomad koristi prirodnije izraze koji su uobičajeni u svakodnevnom srpskom jeziku, kao što su `malopre`, `juče`, `pre pola sata` i `pre nedelju dana`, umesto doslovnih brojčanih prikaza.
 
 ## Instalacija
 
