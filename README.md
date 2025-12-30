@@ -8,15 +8,15 @@ JavaScript već ima ugrađeni Intl API za formatiranje vremena, ali rezultati ni
 
 | Intl.RelativeTimeFormat | Onomad |
 |-------------------------|--------|
-| `pre 30 sekundi` | `malopre` |
-| `pre 1 minut` | `pre minut` |
-| `pre 5 minuta` | `pre 5 minuta` |
-| `pre 30 minuta` | `pre pola sata` |
-| `pre 1 sat` | `pre sat vremena` |
-| `pre 24 sata` | `juče` |
-| `pre 7 dana` | `pre nedelju dana` |
-| `pre 30 dana` | `pre mesec dana` |
-| `pre 365 dana` | `pre godinu dana` |
+| pre 30 sekundi | malopre |
+| pre 1 minut | pre minut |
+| pre 5 minuta | pre 5 minuta |
+| pre 30 minuta | pre pola sata |
+| pre 1 sat | pre sat vremena |
+| pre 24 sata | juče |
+| pre 7 dana | pre nedelju dana |
+| pre 30 dana | pre mesec dana |
+| pre 365 dana | pre godinu dana |
 
 Onomad koristi prirodnije izraze koji su uobičajeni u svakodnevnom srpskom jeziku, kao što su "malopre", "juče", "pre pola sata" i "pre nedelju dana", umesto doslovnih brojčanih prikaza.
 
