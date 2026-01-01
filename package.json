@@ -1,6 +1,6 @@
 {
   "name": "onomad",
-  "version": "2.0.4",
+  "version": "3.0.0",
   "description": "Time formatting optimized for Serbian language",
   "type": "module",
   "main": "./dist/index.js",

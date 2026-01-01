@@ -5,8 +5,10 @@ import { timeago } from 'onomad';
 const props = withDefaults(defineProps<{
   date: Date | string;
   updateInterval?: number;
+  maxAgeUpdate?: number;
 }>(), {
-  updateInterval: 60000
+  updateInterval: 60,
+  maxAgeUpdate: Infinity
 });
 
 const formattedTime = ref(timeago(new Date(props.date)));
@@ -16,8 +18,15 @@ const updateTime = () => {
   formattedTime.value = timeago(new Date(props.date));
 };
 
+const getAgeInMs = () => {
+  return Date.now() - new Date(props.date).getTime();
+};
+
 onMounted(() => {
-  intervalId = setInterval(updateTime, props.updateInterval);
+  const ageInMs = getAgeInMs();
+  if (ageInMs <= props.maxAgeUpdate * 1000) {
+    intervalId = setInterval(updateTime, props.updateInterval * 1000);
+  }
 });
 
 onUnmounted(() => {

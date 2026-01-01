@@ -65,10 +65,18 @@ const postDate = new Date(Date.now() - 5 * 60 * 1000);
 </template>
 ```
 
-Komponenta automatski ažurira prikazan tekst svakih 60 sekundi. Možete prilagoditi interval ažuriranja:
+Komponenta automatski ažurira prikazani tekst svakih 60 sekundi (podrazumevano). Možete prilagoditi interval ažuriranja u sekundama:
 
 ```vue
-<TimeAgo :date="postDate" :update-interval="5000" />
+<!-- Ažuriraj na svakih 30 sekundi -->
+<TimeAgo :date="postDate" :update-interval="120" />
+```
+
+Možete takođe kontrolisati kada se automatsko ažuriranje zaustavlja koristeći `max-age-update` prop. Ako je vreme starije od određenog praga (u sekundama), interval neće biti pokrenut (podrazumevano: bez ograničenja):
+
+```vue
+<!-- Samo ažuriraj ako je vreme mlađe od 1 sat (3600 sekundi) -->
+<TimeAgo :date="postDate" :max-age-update="3600" />
 ```
 
 Za server-side rendering (SSR), komponenta će prikazati inicijalno vreme, a zatim će nastaviti sa ažuriranjem na klijentskoj strani.
